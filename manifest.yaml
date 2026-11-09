@@ -1,0 +1,42 @@
+version: 0.1.0
+type: plugin
+author: teamorouter
+name: teamorouter
+repo: https://github.com/2867297362mjb-sketch/teamorouter-dify-plugin
+contact: 254593613+2867297362mjb-sketch@users.noreply.github.com
+label:
+  en_US: TeamoRouter
+description:
+  en_US: One API key for Claude, GPT, Gemini, DeepSeek, GLM, Kimi, and Qwen models through TeamoRouter's OpenAI-compatible API.
+icon: icon.svg
+icon_dark: icon-dark.svg
+resource:
+  memory: 268435456
+  permission:
+    model:
+      enabled: true
+      llm: true
+      text_embedding: false
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+plugins:
+  models:
+    - provider/teamorouter.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2026-11-10T00:00:00Z
+privacy: PRIVACY.md
+verified: false
+network:
+  domains:
+    - api.teamorouter.com
